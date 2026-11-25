@@ -16,3 +16,11 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+
+# build / browser smoke artifacts
+dist/
+.edge-*/
+screenshots/
+smoke-dom.html
+edge-console.log
+*.tsbuildinfo

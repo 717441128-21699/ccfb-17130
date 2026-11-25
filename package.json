@@ -1,0 +1,25 @@
+{
+  "name": "hive-roi-codec",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Background-separated ROI video compressor for high-speed hive-entrance cameras",
+  "scripts": {
+    "build:wasm": "node scripts/build-wasm.mjs",
+    "dev": "vite",
+    "dev:rebuild-wasm": "npm run build:wasm && vite",
+    "build": "npm run build:wasm && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test:rust": "cargo test --manifest-path wasm-core/Cargo.toml --release",
+    "test": "npm run test:rust && npm run check",
+    "check": "tsc --noEmit",
+    "bench:native": "cargo run --manifest-path wasm-core/Cargo.toml --release --bin hive-bench --",
+    "bench:wasm": "npm run build:wasm && node benchmarks/wasm-bench.mjs",
+    "bench:all": "node scripts/bench-all.mjs",
+    "smoke:cdp": "node scripts/cdp-smoke.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0"
+  }
+}

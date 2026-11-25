@@ -1,0 +1,13 @@
+{
+  "runtime": "wasm32-unknown-unknown / node",
+  "frames": 120,
+  "width": 1920,
+  "height": 1080,
+  "bytes": 26720357,
+  "checksum": 242469,
+  "wallMs": 7292.513900000001,
+  "msPerFrame": 60.770949166666675,
+  "projected_single_worker_60s_200fps_seconds": 729,
+  "projected_8_worker_pool_seconds": 91,
+  "seek_decode_target_ms": 500
+}
