@@ -1,0 +1,20 @@
+{
+  "name": "hive-entrance-codec",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "巢门录像专用压缩工具:背景建模 + 蜜蜂区域自适应码率 + WASM 编解码",
+  "scripts": {
+    "build:wasm": "node scripts/build-wasm.mjs",
+    "dev": "npm run build:wasm && vite",
+    "build": "npm run build:wasm && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "bench": "node --experimental-strip-types scripts/acceptance.ts",
+    "test": "node --experimental-strip-types scripts/acceptance.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.7",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
