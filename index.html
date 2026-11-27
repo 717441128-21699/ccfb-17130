@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>巢门录像内容自适应压缩工具</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="logo">🐝</span>
+          <div>
+            <h1>巢门录像压缩工作台</h1>
+            <p class="subtitle">背景/运动分离 · 内容自适应码率 · WASM 编解码</p>
+          </div>
+        </div>
+        <nav class="tabs">
+          <button class="tab" data-route="import">① 录像导入</button>
+          <button class="tab" data-route="motion">② 运动区域</button>
+          <button class="tab" data-route="bitrate">③ 码率分配</button>
+          <button class="tab" data-route="compare">④ 并排对比</button>
+        </nav>
+      </header>
+      <main id="view"></main>
+      <footer class="statusbar">
+        <span id="status">就绪 · WASM 核心加载中…</span>
+        <span id="metrics"></span>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

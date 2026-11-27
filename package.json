@@ -1,0 +1,24 @@
+{
+  "name": "hive-entrance-codec",
+  "version": "1.0.0",
+  "private": true,
+  "description": "巢门录像专用压缩工具:背景/运动区域分离的内容自适应编码(WASM 核心 + Web Worker 运动分析)",
+  "type": "module",
+  "scripts": {
+    "build:wasm": "node scripts/build-wasm.mjs",
+    "dev": "npm run build:wasm && vite",
+    "build": "npm run build:wasm && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/smoke.test.mjs",
+    "bench": "node tests/run-benchmark.mjs",
+    "bench:perf": "node tests/run-perf.mjs",
+    "bench:full": "node tests/run-benchmark.mjs && node tests/run-perf.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}

@@ -1,0 +1,16 @@
+[package]
+name = "hive-codec"
+version = "1.0.0"
+edition = "2021"
+description = "巢门录像内容自适应编解码核心(背景/运动分离),编译为无依赖 wasm32"
+
+[lib]
+name = "hive_codec"
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+opt-level = 3
+lto = true
+panic = "abort"
+codegen-units = 1
+strip = true
